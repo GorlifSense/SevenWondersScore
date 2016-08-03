@@ -1,0 +1,39 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+Team:
+
+  Andrew:
+    role: Developer
+    twitter: Belrestro
+    github: Belrestro
+
+  Artem:
+    role: Developer
+    github: ArtemDerkach
+
+  Dmitry:
+    role: Developer
+    github: hitpopdimestop
+
+  Glib:
+    role: Developer
+    twitter: Fleischers
+    github: Fleischers
+
+  Sergy:
+    role: Developer
+    github: SolarLumenar
+
+# THANKS
+
+# TECHNOLOGY COLOPHON
+
+Technologies:
+  - HTML5
+  - CSS3
+  - Angular2
+  - TypeScript
+  - Webpack
