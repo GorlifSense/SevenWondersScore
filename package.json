@@ -1,0 +1,33 @@
+{
+  "name": "seven-wonders-score",
+  "version": "0.0.0",
+  "description": "Save your score points for 7 Wonders Board Games in Angular 2 way",
+  "main": "index.js",
+  "engines": {
+    "node": ">=5"
+  },
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GorlifSense/SevenWondersScore.git"
+  },
+  "keywords": [
+    "board",
+    "games",
+    "7",
+    "wonders",
+    "save",
+    "results",
+    "angular2",
+    "web",
+    "app"
+  ],
+  "author": "Gorlif Sense <git@gorlifsense.com> (http://gorlifsense.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GorlifSense/SevenWondersScore/issues"
+  },
+  "homepage": "https://github.com/GorlifSense/SevenWondersScore#readme"
+}
