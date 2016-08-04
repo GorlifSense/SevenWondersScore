@@ -13,17 +13,27 @@ function getWebpackConfigModule() {
   }
 }
 
+const HTTPS_REPO_NAME_RE = /Push  URL: https:\/\/github\.com\/.*\/(.*)\.git/;
+const SSH_REPO_NAME_RE = /Push\s*URL:\s*git@github\.com:.*\/(.*)\.git/;
+
 function getRepoName(remoteName) {
   remoteName = remoteName || 'origin';
 
-  var stdout = execSync('git remote show ' + remoteName),
-      match = REPO_NAME_RE.exec(stdout);
+  var stdout_https = execSync('git remote show ' + remoteName),
+      match_https = HTTPS_REPO_NAME_RE.exec(stdout_https);
 
-  if (!match) {
-    throw new Error('Could not find a repository on remote ' + remoteName);
-  } else {
-    return match[1];
+  var stdout_ssh = execSync('git remote show ' + remoteName),
+      match_ssh = SSH_REPO_NAME_RE.exec(stdout_ssh);
+
+  if (!match_https) {
+     if (!match_ssh) {
+        throw new Error('Could not find a repository on remote ' + remoteName);
+     } else {
+       return match_ssh[1];
+    }} else {
+      return match_https[1];
   }
+
 }
 
 function stripTrailing(str, char) {
