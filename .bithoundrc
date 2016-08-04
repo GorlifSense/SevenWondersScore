@@ -63,6 +63,7 @@
     "**/extjs/resources/**",
     "**/extjs/src/**",
     "**/extjs/welcome/**",
-    "config/**"
+    "config/**",
+    "webpack.config.js"
   ]
 }
