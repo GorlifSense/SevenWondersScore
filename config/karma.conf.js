@@ -35,6 +35,7 @@ module.exports = function(config) {
     coverageReporter: {
       dir : 'coverage/',
       reporters: [
+        { type: 'lcov' },
         { type: 'text-summary' },
         { type: 'json' },
         { type: 'html' }
@@ -72,7 +73,7 @@ module.exports = function(config) {
      * available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
      */
     browsers: [
-      'Chrome'
+      'Firefox'
     ],
 
     /*
