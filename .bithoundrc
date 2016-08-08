@@ -11,6 +11,9 @@
       "angular2-template-loader",
       "@angularclass/conventions-loader",
       "@angular/platform-server"
+    ],
+    "mute": [
+      "rxjs"
     ]
   },
   "test": [
