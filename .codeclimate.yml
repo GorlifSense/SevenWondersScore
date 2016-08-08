@@ -1,0 +1,27 @@
+---
+engines:
+  csslint:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - javascript
+  scss-lint:
+    enabled: false
+  fixme:
+    enabled: true
+  markdownlint:
+    enabled: true
+  eslint:
+    enabled: false
+  tslint:
+    enabled: true
+ratings:
+  paths:
+  - "**.css"
+  - "**.ts"
+  - "**.js"
+  - "**.module"
+exclude_paths:
+- config/
