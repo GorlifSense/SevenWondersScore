@@ -1,22 +1,17 @@
 <nav>
   <span>
-    <a [routerLink]=" ['./'] ">
-      Index
-    </a>
-  </span>
-  <span>
-    <a [routerLink]=" ['./home'] ">
+    <a [routerLink]=" ['./'] " class="btn btn-success">
       Home
     </a>
   </span>
-  <span>
-    <a [routerLink]=" ['./detail'] ">
-      Detail
+    <span>
+    <a [routerLink]=" ['./tables'] " class="btn btn-default">
+      Tables
     </a>
   </span>
   <span>
-    <a [routerLink]=" ['./about'] ">
-      About
+    <a [routerLink]=" ['./add-table'] " class="btn btn-default">
+      Add Table
     </a>
   </span>
 </nav>
@@ -25,9 +20,11 @@
   <router-outlet></router-outlet>
 </main>
 
-<pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
+<section class="content">
+  <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
+</section>
 
-<footer>
+<footer class="content">
   <span>Seven Wonders Score Started by <a [href]="url">@GorlifSense</a></span>
   <div>
     <a [href]="url">
