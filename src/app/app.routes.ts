@@ -1,11 +1,11 @@
 import { WebpackAsyncRoute } from '@angularclass/webpack-toolkit';
-import { RouterConfig } from '@angular/router';
+import { RouterConfig, RouterModule } from '@angular/router';
 import { HomeComponent } from './home';
 import { TablesComponent } from './tables';
 import { AddTableComponent } from './add-table';
 import { NoContentComponent } from './no-content';
 
-export const routes: RouterConfig = [
+export const appRoutes: RouterConfig = [
   { path: '',        component: HomeComponent },
   { path: 'home',    component: HomeComponent },
   { path: 'tables',  component: TablesComponent },
@@ -13,6 +13,7 @@ export const routes: RouterConfig = [
   { path: '**',      component: NoContentComponent },
 ];
 
+export const routing = RouterModule.forRoot(appRoutes);
 // Async load a component using Webpack's require with es6-promise-loader and webpack `require`
 // asyncRoutes is needed for our @angularclass/webpack-toolkit that will allow us to resolve
 // the component correctly
@@ -29,7 +30,7 @@ export const asyncRoutes: AsyncRoutes = {
 export const prefetchRouteCallbacks: Array<IdleCallbacks> = [
   asyncRoutes['tables'],
   asyncRoutes['add-table'],
-   // es6-promise-loader returns a function
+  // es6-promise-loader returns a function
 ];
 
 
