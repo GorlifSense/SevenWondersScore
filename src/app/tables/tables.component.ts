@@ -6,14 +6,14 @@ import { ActivatedRoute } from '@angular/router';
  * see https://github.com/gdi2290/es6-promise-loader for more info
  */
 
-console.log('`About` component loaded asynchronously');
+console.log('`Tables` component loaded asynchronously');
 
 @Component({
-  selector: 'about',
+  selector: 'tables',
   styles: [`
   `],
   template: `
-    <h1>About</h1>
+    <h1>Tables</h1>
     <div>
       For hot module reloading run
       <pre>npm run start:hmr</pre>
@@ -26,7 +26,7 @@ console.log('`About` component loaded asynchronously');
     <pre>this.localState = {{ localState | json }}</pre>
   `
 })
-export class About {
+export class TablesComponent {
   localState;
   constructor(public route: ActivatedRoute) {
 
@@ -40,7 +40,7 @@ export class About {
         this.localState = data.yourData;
       });
 
-    console.log('hello `About` component');
+    console.log('hello `Tables` component');
     // static data that is bundled
     // var mockData = require('assets/mock-data/mock-data.json');
     // console.log('mockData', mockData);
