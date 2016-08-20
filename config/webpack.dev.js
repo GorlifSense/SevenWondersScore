@@ -127,7 +127,7 @@ module.exports = webpackMerge(commonConfig, {
   /**
    * Webpack Development Server configuration
    * Description: The webpack-dev-server is a little node.js Express server.
-   * The server emits information about the compilation state to the client,
+   * The server emits information tables the compilation state to the client,
    * which reacts to those events.
    *
    * See: https://webpack.github.io/docs/webpack-dev-server.html

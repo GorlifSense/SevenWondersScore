@@ -52,7 +52,7 @@ module.exports = {
 
     'polyfills': './src/polyfills.browser.ts',
     'vendor':    './src/vendor.browser.ts',
-    'main':      './src/main.browser.ts'
+    'main':      './src/main.ts'
 
   },
 

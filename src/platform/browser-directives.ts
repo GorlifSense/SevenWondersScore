@@ -2,7 +2,7 @@
  * These are globally available directives in any template
  */
 // Angular 2
-import { PLATFORM_DIRECTIVES } from '@angular/core';
+import { CompilerConfig } from '@angular/compiler';
 // Angular 2 Router
 import { ROUTER_DIRECTIVES } from '@angular/router';
 // Angular 2 forms
@@ -15,5 +15,5 @@ export const APPLICATION_DIRECTIVES = [
 ];
 
 export const DIRECTIVES = [
-  { provide: PLATFORM_DIRECTIVES, multi: true, useValue: APPLICATION_DIRECTIVES }
+  { provide: CompilerConfig, multi: true, useValue: APPLICATION_DIRECTIVES }
 ];

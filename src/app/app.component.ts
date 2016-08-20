@@ -16,7 +16,7 @@ import { AppState } from './app.service';
   templateUrl: 'app.component.html'
 })
 
-export class App {
+export class AppComponent {
   angularclassLogo = 'assets/img/angularclass-avatar.png';
   name = 'Seven Wonders Score';
   url = 'https://twitter.com/GorlifSense';
