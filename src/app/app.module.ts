@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { PLATFORM_PROVIDERS } from '../platform/browser';
@@ -22,7 +23,7 @@ import { routing } from './app.routes';
     AddTableComponent,
     TablesComponent
   ],
-  imports: [BrowserModule, RouterModule, routing],
+  imports: [BrowserModule, RouterModule, HttpModule, routing],
   bootstrap: [AppComponent],
   providers: [...PLATFORM_PROVIDERS, ...ENV_PROVIDERS, ...APP_PROVIDERS]
 })

@@ -1,11 +1,10 @@
-import { WebpackAsyncRoute } from '@angularclass/webpack-toolkit';
-import { RouterConfig, RouterModule } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home';
 import { TablesComponent } from './tables';
 import { AddTableComponent } from './add-table';
 import { NoContentComponent } from './no-content';
 
-export const appRoutes: RouterConfig = [
+export const appRoutes: Routes = [
   { path: '',        component: HomeComponent },
   { path: 'home',    component: HomeComponent },
   { path: 'tables',  component: TablesComponent },

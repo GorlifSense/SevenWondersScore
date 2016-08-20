@@ -4,8 +4,6 @@
 
 // Angular 2
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-// Angular 2 Http
-import { HTTP_PROVIDERS } from '@angular/http';
 // Angular 2 Router
 import { provideRouter } from '@angular/router';
 // Angular 2 forms
@@ -30,8 +28,6 @@ export const APPLICATION_PROVIDERS = [
   provideRouter(appRoutes),
   provideWebpack(asyncRoutes),
   providePrefetchIdleCallbacks(prefetchRouteCallbacks),
-
-  ...HTTP_PROVIDERS,
 
   { provide: LocationStrategy, useClass: HashLocationStrategy }
 ];
