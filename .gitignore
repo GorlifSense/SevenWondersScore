@@ -1,3 +1,44 @@
+# Compiled output
+/dist
+/tmp
+
+# Dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+.swp
+
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+#System Files
+.DS_Store
+Thumbs.db
+
 # Logs
 logs
 *.log
@@ -14,53 +55,5 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 
-# nyc test coverage
-.nyc_output
-
-# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
-.grunt
-
-# node-waf configuration
-.lock-wscript
-
-# Compiled binary addons (http://nodejs.org/api/addons.html)
-build/Release
-
-# Dependency directories
-node_modules
-jspm_packages
-/bower_components
-
 # Optional npm cache directory
 .npm
-
-# Optional REPL history
-.node_repl_history
-
-# OS specific
-.DS_Store
-ehthumbs.db
-Icon?
-Thumbs.db
-
-# Typing
-/src/typings/tsd/
-/typings/
-/tsd_typings/
-
-# Dist
-/dist
-/public/__build__/
-/src/*/__build__/
-/__build__/**
-/public/dist/
-/src/*/dist/
-/dist/**
-.webpack.json
-
-# Doc
-/doc/
-
-# Text editors/IDE specific
-.swp
-.idea/
