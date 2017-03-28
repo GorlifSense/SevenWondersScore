@@ -5,7 +5,6 @@ should be launched in conjunction with
 [API server](https://github.com/GorlifSense/Board-Games-Results)
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli)
-version 1.0.0-beta.26.
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
@@ -32,7 +31,7 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 ## Deploying to GitHub Pages
 
-Run `ng github-pages:deploy` to deploy to GitHub Pages.
+Use [angular-cli-ghpages](https://github.com/angular-buch/angular-cli-ghpages) to deploy to GitHub Pages.
 
 ## Further help
 
