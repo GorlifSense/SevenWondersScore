@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - "6"
+  - "7"
+
+cache: yarn
 
 sudo: required
 dist: trusty
@@ -18,16 +21,8 @@ before_install:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 
-# before_script:
-# - npm install -g angular-cli
-# - npm install -g karma
-# - npm install
-# - ng build
-#
-# script: karma start config/karma.conf.js --single-run
-
 notifications:
   slack:
     rooms:
-      gorlifsense:S7RWHqp3eUYiYBusZOzXytvR#development
+      gorlifsense:S7RWHqp3eUYiYBusZOzXytvR#boardgamesresults
     on_success: change
