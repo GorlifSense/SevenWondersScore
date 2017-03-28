@@ -1,7 +1,7 @@
 {
   "name": "seven-wonders-score",
   "description": "Save your score points for 7 Wonders Board Games in Angular 2 way",
-  "version": "0.0.1-alpha.3",
+  "version": "0.0.1-alpha.4",
   "license": "ISC",
   "angular-cli": {},
   "scripts": {

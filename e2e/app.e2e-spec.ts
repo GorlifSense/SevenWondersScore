@@ -1,6 +1,6 @@
 import { SevenWondersScorePage } from './app.po';
 
-describe('bgr240 App', function() {
+describe('bgr App', function() {
   let page: SevenWondersScorePage;
 
   beforeEach(() => {

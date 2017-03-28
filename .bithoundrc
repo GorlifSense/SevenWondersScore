@@ -13,7 +13,8 @@
       "@angular/platform-server"
     ],
     "mute": [
-      "rxjs"
+      "rxjs",
+      "@types/jasmine"
     ]
   },
   "test": [

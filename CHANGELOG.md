@@ -1,8 +1,13 @@
 # Release notes for Seven Wonders Score
 
+## v0.0.1-alpha.4
+
+* Connect to board-games-results@0.1.6
+
 ## v0.0.1-alpha.3
 
-* Upgrade to Angular 4
+* Upgrade to Angular 4.0.0
+* Upgrade Angular CLI to 1.0.0
 
 ## v0.0.1-alpha.2
 
