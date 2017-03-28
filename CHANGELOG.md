@@ -1,5 +1,9 @@
 # Release notes for Seven Wonders Score
 
+## v0.0.1-alpha.3
+
+* Upgrade to Angular 4
+
 ## v0.0.1-alpha.2
 
 * Init Angular v2.3.1
