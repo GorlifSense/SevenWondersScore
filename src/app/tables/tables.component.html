@@ -1,0 +1,26 @@
+<section id="contentBottom">
+  <h2>Tables</h2>
+  <p>You have <strong>{{tables.length}}</strong> tables!</p>
+  <p><a href="/create">Create a Table</a></p>
+  <div class="panel panel-default">
+    <div class="panel-heading">7 Wonders</div>
+    for table in tables
+    <div class="panel-body">
+      <div class="date"> description</div>
+      <div class="panel panel-default game-panel">
+        <div class="panel-body mainD">
+          <div class="row">
+            for player in players
+            <div class="border player-block">
+              <div class="playerName">{{tables[0].name}}</div>
+              <div class="player-img"><img src="favicon.ico"></div>
+              <div class="player-points"> {{tables[0].situation.total}}</div>
+            </div>
+            endfor
+          </div>
+        </div>
+      </div>
+    </div>
+    endfor
+  </div>
+</section>

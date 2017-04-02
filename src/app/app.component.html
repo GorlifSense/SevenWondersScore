@@ -1,15 +1,6 @@
-<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<bgr-navigation></bgr-navigation>
 
-  <a class="navbar-brand" href="#">{{title}}</a>
-  <div class="navbar-nav">
-    <a href="/create" class="nav-link">Add table</a>
-  </div>
-
-</nav>
+<bgr-tables></bgr-tables>
 
 <div style="display: none">
 <section id="content" class="create">
@@ -136,32 +127,7 @@
   </div>
 </section>
 
-<section id="contentBottom">
-  <h1>Tables</h1>
-  <p>You have <strong> tables </strong> tables!</p>
-  <p><a href="/create">Create a Table</a></p>
-  <div class="panel panel-default">
-    <div class="panel-heading">7 Wonders</div>
-    for table in tables
-    <div class="panel-body">
-      <div class="date"> description</div>
-      <div class="panel panel-default game-panel">
-        <div class="panel-body mainD">
-          <div class="row">
-            for player in players
-            <div class="border player-block">
-              <div class="playerName"> name</div>
-              <div class="player-img"></div>
-              <div class="player-points"> situationTotal</div>
-            </div>
-            endfor
-          </div>
-        </div>
-      </div>
-    </div>
-    endfor
-  </div>
-</section>
+
 <section id="about">
   <p>Testing playground for <a href="https://github.com/GorlifSense">Gorlif Sense</a> development team.</p>
 </section>
