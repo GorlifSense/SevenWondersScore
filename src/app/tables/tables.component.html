@@ -1,0 +1,36 @@
+<section id="contentBottom">
+  <p>You have {{tables}} tables!</p>
+  <!--<p><a href="/create">Create a Table</a></p>-->
+  <button
+    class="btn btn-primary"
+    (click)="onCreateTable()">Add Table</button>
+
+  <input
+    type="text"
+    class="form-control"
+    (input)="onUpdateTableName($event)">
+
+  <h2>{{tableName}}</h2>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">7 Wonders</div>
+    for table in tables
+    <div class="panel-body">
+      <div class="date"> description</div>
+      <div class="panel panel-default game-panel">
+        <div class="panel-body mainD">
+          <div class="row">
+            for player in players
+            <div class="border player-block">
+              <div class="playerName"> name</div>
+              <div class="player-img"></div>
+              <div class="player-points"> situationTotal</div>
+            </div>
+            endfor
+          </div>
+        </div>
+      </div>
+    </div>
+    endfor
+  </div>
+</section>
