@@ -3,6 +3,7 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { TablesComponent } from './tables/tables.component';
 import { FormsModule } from '@angular/forms';
+import { TableItemComponent } from './tables/table-item/table-item.component';
 
 describe('AppComponent', () => {
   beforeEach(() => {
@@ -11,7 +12,8 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         NavigationComponent,
-        TablesComponent
+        TablesComponent,
+        TableItemComponent
       ],
     });
     TestBed.compileComponents();

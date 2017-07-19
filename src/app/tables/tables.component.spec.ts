@@ -1,8 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { TablesComponent } from './tables.component';
 import { TableDetailComponent } from './table-detail/table-detail.component';
-import { FormsModule } from '@angular/forms';
+import { TableItemComponent } from './table-item/table-item.component';
 
 describe('TablesComponent', () => {
   let component: TablesComponent;
@@ -14,7 +15,8 @@ describe('TablesComponent', () => {
       imports: [FormsModule],
       declarations: [
         TablesComponent,
-        TableDetailComponent
+        TableDetailComponent,
+        TableItemComponent
       ]
     })
     .compileComponents();
