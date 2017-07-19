@@ -3,7 +3,8 @@
   <!--<p><a href="/create">Create a Table</a></p>-->
   <button
     class="btn btn-primary"
-    (click)="onCreateTable()">Add Table</button>
+    [disabled] = "tableName === ''"
+    (click)="onResetTable()">Reset Table Name</button>
 
   <!--<input-->
     <!--type="text"-->

@@ -8,21 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class TablesComponent implements OnInit {
 
   tables = 1;
-  tableName = `
-      overextension is required to view that
-      what else can you do about helping those
-      numbers of troops in Pakistani where rebels
-      occupied the vast majority of population and hit
-      disease to reflect any changes in view
-  `;
+  tableName: string;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  onCreateTable() {
-    this.tables++;
+  onResetTable() {
+    this.tableName = '';
   }
 
   onUpdateTableName(event: Event) {
