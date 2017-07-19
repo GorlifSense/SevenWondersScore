@@ -1,13 +1,17 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { TablesComponent } from './tables/tables.component';
+import { FormsModule } from '@angular/forms';
 
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [FormsModule],
       declarations: [
         AppComponent,
-        NavigationComponent
+        NavigationComponent,
+        TablesComponent
       ],
     });
     TestBed.compileComponents();

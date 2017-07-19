@@ -5,10 +5,15 @@
     class="btn btn-primary"
     (click)="onCreateTable()">Add Table</button>
 
+  <!--<input-->
+    <!--type="text"-->
+    <!--class="form-control"-->
+    <!--(input)="onUpdateTableName($event)">-->
+
   <input
     type="text"
     class="form-control"
-    (input)="onUpdateTableName($event)">
+    [(ngModel)]="tableName">
 
   <h2>{{tableName}}</h2>
 
