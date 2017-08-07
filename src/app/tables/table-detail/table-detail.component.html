@@ -1,3 +1,22 @@
+
+<button
+  class="btn btn-primary"
+  [disabled] = "tableName === ''"
+  (click)="onResetTable()">Reset Table Name</button>
+
+<!--<input-->
+<!--type="text"-->
+<!--class="form-control"-->
+<!--(input)="onUpdateTableName($event)">-->
+
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="tableName">
+
+<h2>{{tableName}}</h2>
+
+
 <section id="content" class="create">
   <input type="text" id="js-table-name" value="New table"/>
   <div class="form-group">

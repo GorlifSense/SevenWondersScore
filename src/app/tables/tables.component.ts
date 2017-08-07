@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'bgr-tables',
   templateUrl: './tables.component.html',
   styleUrls: ['./tables.component.css']
 })
-export class TablesComponent implements OnInit {
+export class TablesComponent {
 
+  // TODO pick data from http://bgr.gorlifsense.com/api/v1/tables
+  // TODO remove mocked data
   /* tslint:disable */
   tables: any = [
     {
@@ -78,12 +80,12 @@ export class TablesComponent implements OnInit {
               "side": "a"
             },
             "situation": {
-              "military": "0",
-              "gold": "0",
-              "wonder": "0",
-              "culture": "0",
-              "trade": "0",
-              "guild": "0",
+              "military": "2",
+              "gold": "3",
+              "wonder": "4",
+              "culture": "5",
+              "trade": "1",
+              "guild": "1",
               "science": "0"
             }
           },
@@ -94,7 +96,7 @@ export class TablesComponent implements OnInit {
               "side": "a"
             },
             "situation": {
-              "military": "0",
+              "military": "-6",
               "gold": "0",
               "wonder": "0",
               "culture": "0",
@@ -110,10 +112,10 @@ export class TablesComponent implements OnInit {
               "side": "a"
             },
             "situation": {
-              "military": "0",
-              "gold": "0",
-              "wonder": "0",
-              "culture": "0",
+              "military": "10",
+              "gold": "20",
+              "wonder": "30",
+              "culture": "5",
               "trade": "0",
               "guild": "0",
               "science": "0"
@@ -129,7 +131,7 @@ export class TablesComponent implements OnInit {
               "military": "0",
               "gold": "0",
               "wonder": "0",
-              "culture": "0",
+              "culture": "7",
               "trade": "0",
               "guild": "0",
               "science": "0"
@@ -157,7 +159,7 @@ export class TablesComponent implements OnInit {
               "wonder": "0",
               "culture": "0",
               "trade": "0",
-              "guild": "0",
+              "guild": "9",
               "science": "0"
             }
           },
@@ -171,10 +173,10 @@ export class TablesComponent implements OnInit {
               "military": "0",
               "gold": "0",
               "wonder": "0",
-              "culture": "0",
+              "culture": "9",
               "trade": "0",
               "guild": "0",
-              "science": "0"
+              "science": "9"
             }
           },
           {
@@ -184,11 +186,11 @@ export class TablesComponent implements OnInit {
               "side": "a"
             },
             "situation": {
-              "military": "0",
+              "military": "9",
               "gold": "0",
               "wonder": "0",
-              "culture": "0",
-              "trade": "0",
+              "culture": "9",
+              "trade": "9",
               "guild": "0",
               "science": "0"
             }
@@ -203,7 +205,7 @@ export class TablesComponent implements OnInit {
               "military": "0",
               "gold": "0",
               "wonder": "0",
-              "culture": "0",
+              "culture": "2",
               "trade": "0",
               "guild": "0",
               "science": "0"
@@ -302,7 +304,7 @@ export class TablesComponent implements OnInit {
               "culture": "0",
               "trade": "0",
               "guild": "0",
-              "science": "0"
+              "science": "1"
             }
           }
         ]
@@ -325,7 +327,7 @@ export class TablesComponent implements OnInit {
             "situation": {
               "military": "0",
               "gold": "0",
-              "wonder": "0",
+              "wonder": "2",
               "culture": "0",
               "trade": "0",
               "guild": "0",
@@ -342,7 +344,7 @@ export class TablesComponent implements OnInit {
               "military": "0",
               "gold": "0",
               "wonder": "0",
-              "culture": "0",
+              "culture": "3",
               "trade": "0",
               "guild": "0",
               "science": "0"
@@ -356,27 +358,9 @@ export class TablesComponent implements OnInit {
     }
   ];
   /* tslint:enable */
-  tableName: string;
-  tableCreated = false;
 
-  constructor() { }
 
-  ngOnInit() {
-  }
-
-  onResetTable() {
-    this.tableName = '';
-  }
-
-  // onUpdateTableName(event: Event) {
-  //   this.tableName = (<HTMLInputElement>event.target).value;
-  // }
-
-  onCreateTable() {
-    this.tables.push({ description: this.tableName});
-  }
-
-  getColor() {
+  static getColor() {
     return 'green';
   }
 }

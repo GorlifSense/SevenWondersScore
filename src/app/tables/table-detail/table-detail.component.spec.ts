@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TableDetailComponent } from './table-detail.component';
+import { FormsModule } from '@angular/forms';
 
 describe('TableDetailComponent', () => {
   let component: TableDetailComponent;
@@ -8,6 +9,7 @@ describe('TableDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ FormsModule ],
       declarations: [ TableDetailComponent ]
     })
     .compileComponents();

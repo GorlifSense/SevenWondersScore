@@ -1,21 +1,14 @@
-<div class="panel panel-default">
-  <div class="panel-heading">7 Wonders</div>
-  for table in tables
-  <div class="panel-body">
-    <div class="date"> description</div>
-    <div class="panel panel-default game-panel">
-      <div class="panel-body mainD">
-        <div class="row">
-          for player in players
-          <div class="border player-block">
-            <div class="playerName"> name</div>
-            <div class="player-img"></div>
-            <div class="player-points"> situationTotal</div>
-          </div>
-          endfor
+<div class="card">
+  <div class="card-header">{{table.description}}</div>
+  <div class="card game-panel">
+    <div class="card-block mainD">
+      <div class="row">
+        <div *ngFor="let player of table.game.players" class="border player-block">
+          <div class="playerName">{{player.name}}</div>
+          <img class="player-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/RB_keyboard_icon.svg/100px-RB_keyboard_icon.svg.png">
+          <div class="player-points">{{sumAllPlayerPoints(player)}}</div>
         </div>
       </div>
     </div>
   </div>
-  endfor
 </div>

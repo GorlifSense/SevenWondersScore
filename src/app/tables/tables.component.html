@@ -8,23 +8,7 @@
       [ngClass]="{online: true}"
     >No tables</p>
   </ng-template>
-  <!--<p><a href="/create">Create a Table</a></p>-->
-  <button
-    class="btn btn-primary"
-    [disabled] = "tableName === ''"
-    (click)="onResetTable()">Reset Table Name</button>
 
-  <!--<input-->
-    <!--type="text"-->
-    <!--class="form-control"-->
-    <!--(input)="onUpdateTableName($event)">-->
+  <bgr-table-item *ngFor="let table of tables" [table]="table"></bgr-table-item>
 
-  <input
-    type="text"
-    class="form-control"
-    [(ngModel)]="tableName">
-
-  <h2>{{tableName}}</h2>
-
-  <bgr-table-item *ngFor="let table of tables"></bgr-table-item>
 </section>

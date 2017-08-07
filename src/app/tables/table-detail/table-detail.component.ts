@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableDetailComponent implements OnInit {
 
+  tableName: string;
+  tableCreated = false;
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  onResetTable() {
+    this.tableName = '';
+  }
+
+  // onUpdateTableName(event: Event) {
+  //   this.tableName = (<HTMLInputElement>event.target).value;
+  // }
 
 }
