@@ -1,1 +1,221 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*TODO place all the css to corresponding components*/
+nav {
+  padding:15px 15px 0 15px;
+}
+#content {
+  padding:15px;
+}
+.border{
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  text-align: center;
+}
+.date{
+  margin: -3px 0 10px 17px;
+}
+.mainD{
+  background-color: lightgrey;
+}
+.player-img{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0px auto;
+  background-color: green;
+  border-radius: 10px;
+}
+.playerName{
+  margin:5px auto;
+  text-align: left;
+}
+.player-points{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0px auto;
+  background-color: darkviolet;
+  color:white;
+  border-radius: 10px;
+  vertical-align: top;
+  line-height: 50px;
+}
+.win{
+  background-color: white;
+  /*background-image: url(../images/crown.png);*/
+  background-size: cover;
+}
+.player-block:first-of-type{
+  margin-left: 0px;
+}
+.player-block{
+  display: inline-block;
+  margin-left: 20px;
+  padding: 5px 5px;
+  background-color: white;
+}
+.button-div{
+  margin: 10px 10px 10px 30px;
+}
+.game-panel input[type=checkbox] + div{
+  max-height: 0px;
+  overflow: hidden;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -o-transition: .5s;
+}
+.game-panel input[type=checkbox]:checked + div{
+  max-height: 2400px;
+}
+.container{
+  margin: 10px 0 10px 20px ;
+}
+.raz{
+  text-align: center;
+}
+.container label:hover{
+  background-color: darkgrey;
+  border-color: darkgrey;
+}
+label[for="general"]{
+  background-color: black;
+  border-color: black;
+}
+label[for="war"]{
+  background-color: red;
+  border-color: red;
+}
+label[for="gold"]{
+  background-color: gold;
+  border-color: gold;
+}
+label[for="wonder"]{
+  background-color: gray;
+  border-color: gray;
+}
+label[for="culture"]{
+  background-color: blue;
+  border-color: blue;
+}
+label[for="trade"]{
+  background-color: orange;
+  border-color: orange;
+}
+label[for="guild"]{
+  background-color: darkviolet;
+  border-color: darkviolet;
+}
+label[for="science"]{
+  background-color: green;
+  border-color: green;
+}
+.bor{
+  border:1px solid black;
+}
+
+
+/* table-create.css */
+.player-none {
+  display: none;
+}
+#js-table-name {
+  width:100%;
+  border:0;
+  outline:none;
+  font-size:36px;
+  background: transparent;
+}
+#error {
+  box-sizing: border-box;
+  max-width: 100%;
+  max-height: 0px;
+  padding:0px 10px;
+  margin-bottom:0px;
+  opacity: 0;
+  border:1px solid transparent;
+  border-radius: 4px;
+  transition:.5s;
+  -webkit-transition:.5s;
+  -moz-transition:.5s;
+  -o-transition:.5s;
+}
+#error.active {
+  opacity: 1;
+  padding: 10px;
+  border-color:#E96666;
+  margin-bottom: 10px;
+  max-height: 300px;
+}
+textarea {
+  max-width: 100%;
+  width: 100%;
+  max-height:200px;
+}
+input.invalid {
+  border-color: #E96666;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(173,0,0,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(173,0,0,.6);
+}
+.form-group input[type=number] {
+  padding:6px 0 6px 6px;
+}
+.player {
+  position: relative;
+  background-color: #F5F5F5;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  animation:playerAppear .5s ease-in-out;
+  -webkit-animation:playerAppear 1s ease-in-out;
+  -moz-animation:playerAppear 1s ease-in-out;
+  -o-animation:playerAppear 1s ease-in-out;
+}
+.player .remove-player {
+  position: absolute;
+  right: -45px;
+  top: -1px;
+  opacity: 0;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -o-transition: .5s;
+}
+.player:hover .remove-player {
+  opacity: 1;
+}
+@-webkit-keyframes playerAppear {
+  from {border-width:0px;margin:0;padding:0 10px;max-height: 0px;opacity: 0;overflow: hidden;}
+  to {border-width:1px;margin:10px 0;padding:10px;max-height:300px;opacity: 1;overflow: visible;}
+}
+@-o-keyframes playerAppear {
+  from {border-width:0px;margin:0;padding:0 10px;max-height: 0px;opacity: 0;overflow: hidden;}
+  to {border-width:1px;margin:10px 0;padding:10px;max-height:300px;opacity: 1;overflow: visible;}
+}
+@-moz-keyframes playerAppear {
+  from {border-width:0px;margin:0;padding:0 10px;max-height: 0px;opacity: 0;overflow: hidden;}
+  to {border-width:1px;margin:10px 0;padding:10px;max-height:300px;opacity: 1;overflow: visible;}
+}
+@keyframes playerAppear {
+  from {border-width:0px;margin:0;padding:0 10px;max-height: 0px;opacity: 0;overflow: hidden;}
+  to {border-width:1px;margin:10px 0;padding:10px;max-height:300px;opacity: 1;overflow: visible;}
+}
+
+@-webkit-keyframes playerFade {
+  from {border-width:1px;margin: 10px 20px 10px 0;padding:10px;max-height:300px;opacity: 1;overflow:visible;}
+  to {border-width:0px;margin:0px 20px 0px 0;padding:0 10px;max-height: 0px;opacity: 0;overflow:hidden;}
+}
+@-o-keyframes playerFade {
+  from {border-width:1px;margin: 10px 20px 10px 0;padding:10px;max-height:300px;opacity: 1;overflow:visible;}
+  to {border-width:0px;margin:0px 20px 0px 0;padding:0 10px;max-height: 0px;opacity: 0;overflow:hidden;}
+}
+@-moz-keyframes playerFade {
+  from {border-width:1px;margin: 10px 20px 10px 0;padding:10px;max-height:300px;opacity: 1;overflow:visible;}
+  to {border-width:0px;margin:0px 20px 0px 0;padding:0 10px;max-height: 0px;opacity: 0;overflow:hidden;}
+}
+@keyframes playerFade {
+  from {border-width:1px;margin: 10px 20px 10px 0;padding:10px;max-height:300px;opacity: 1;overflow:visible;}
+  to {border-width:0px;margin:0px 20px 0px 0;padding:0 10px;max-height: 0px;opacity: 0;overflow:hidden;}
+}

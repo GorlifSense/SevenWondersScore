@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-header">{{table.description}}</div>
+  <div class="card game-panel">
+    <div class="card-block mainD">
+      <div class="row">
+        <div *ngFor="let player of table.game.players" class="border player-block">
+          <div class="playerName">{{player.name}}</div>
+          <img class="player-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/RB_keyboard_icon.svg/100px-RB_keyboard_icon.svg.png">
+          <div class="player-points">{{sumAllPlayerPoints(player)}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

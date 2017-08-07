@@ -6,6 +6,6 @@ export class SevenWondersScorePage {
   }
 
   getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+    return element(by.css('body > bgr-root > bgr-navigation > nav > a')).getText();
   }
 }

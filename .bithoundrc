@@ -6,14 +6,10 @@
   },
   "dependencies": {
     "unused-ignores": [
-      "http-server",
-      "ie-shim",
-      "angular2-template-loader",
-      "@angularclass/conventions-loader",
-      "@angular/platform-server"
     ],
     "mute": [
-      "rxjs"
+      "rxjs",
+      "@types/jasmine"
     ]
   },
   "test": [

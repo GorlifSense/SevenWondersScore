@@ -1,13 +1,19 @@
-/* tslint:disable:no-unused-variable */
-
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { TablesComponent } from './tables/tables.component';
+import { FormsModule } from '@angular/forms';
+import { TableItemComponent } from './tables/table-item/table-item.component';
 
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [],
       declarations: [
-        AppComponent
+        AppComponent,
+        NavigationComponent,
+        TablesComponent,
+        TableItemComponent
       ],
     });
     TestBed.compileComponents();
@@ -19,16 +25,4 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   }));
 
-  it(`should have as title 'app works!'`, async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('Seven Wonders Score');
-  }));
-
-  it('should render title in a h1 tag', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Seven Wonders Score');
-  }));
 });

@@ -1,0 +1,14 @@
+<section id="contentBottom">
+
+  <div *ngIf="tables.length > 0; else noTables">
+    <p>You have {{tables.length}} tables!</p>
+  </div>
+  <ng-template #noTables>
+    <p [ngStyle]="{backgroundColor: getColor()}"
+      [ngClass]="{online: true}"
+    >No tables</p>
+  </ng-template>
+
+  <bgr-table-item *ngFor="let table of tables" [table]="table"></bgr-table-item>
+
+</section>
