@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TablesComponent implements OnInit {
 
+  /* tslint:disable */
   tables: any = [
     {
       "_id": "575c5cc9f418f427377fdfab",
@@ -354,6 +355,7 @@ export class TablesComponent implements OnInit {
       "updated_at": "2017-07-05T18:52:19.392Z"
     }
   ];
+  /* tslint:enable */
   tableName: string;
   tableCreated = false;
 
