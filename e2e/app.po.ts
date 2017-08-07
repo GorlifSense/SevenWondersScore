@@ -6,6 +6,6 @@ export class SevenWondersScorePage {
   }
 
   getParagraphText() {
-    return element(by.css('bgr-navigation a .navbar-brand')).getText();
+    return element(by.css('body > bgr-root > bgr-navigation > nav > a')).getText();
   }
 }
