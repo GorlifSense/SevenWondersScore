@@ -1,7 +1,7 @@
 {
   "name": "seven-wonders-score",
   "description": "Save your score points for 7 Wonders Board Games in Angular 2 way",
-  "version": "0.0.1-alpha.4",
+  "version": "0.0.1-alpha.5",
   "license": "ISC",
   "angular-cli": {},
   "scripts": {
@@ -30,29 +30,29 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^4.3.0",
-    "@angular/common": "^4.3.0",
-    "@angular/compiler": "^4.3.0",
-    "@angular/core": "^4.3.0",
-    "@angular/forms": "^4.3.0",
-    "@angular/http": "^4.3.0",
-    "@angular/platform-browser": "^4.3.0",
-    "@angular/platform-browser-dynamic": "^4.3.0",
-    "@angular/platform-server": "^4.3.0",
-    "@angular/router": "^4.3.0",
-    "core-js": "^2.4.1",
+    "@angular/animations": "^4.3.3",
+    "@angular/common": "^4.3.3",
+    "@angular/compiler": "^4.3.3",
+    "@angular/core": "^4.3.3",
+    "@angular/forms": "^4.3.3",
+    "@angular/http": "^4.3.3",
+    "@angular/platform-browser": "^4.3.3",
+    "@angular/platform-browser-dynamic": "^4.3.3",
+    "@angular/platform-server": "^4.3.3",
+    "@angular/router": "^4.3.3",
+    "core-js": "^2.5.0",
     "rxjs": "^5.1.0",
-    "zone.js": "^0.8.14"
+    "zone.js": "^0.8.16"
   },
   "devDependencies": {
-    "@angular/cli": "^1.2.1",
-    "@angular/compiler-cli": "^4.3.0",
+    "@angular/cli": "^1.2.7",
+    "@angular/compiler-cli": "^4.3.3",
     "@types/jasmine": "2.5.38",
-    "@types/node": "^8.0.13",
+    "@types/node": "^8.0.19",
     "codeclimate-test-reporter": "^0.5.0",
     "codelyzer": "^3.1.2",
     "jasmine-core": "^2.7.0",
-    "jasmine-spec-reporter": "^4.1.1",
+    "jasmine-spec-reporter": "^4.2.0",
     "karma": "^1.7.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-cli": "^1.0.1",
@@ -63,12 +63,12 @@
     "protractor": "^5.1.2",
     "remark-cli": "^3.0.1",
     "remark-lint": "^6.0.0",
-    "ts-node": "^3.2.0",
-    "tslint": "^5.5.0",
-    "typescript": "^2.4.1"
+    "ts-node": "^3.3.0",
+    "tslint": "^5.6.0",
+    "typescript": "^2.4.2"
   },
   "peerDependencies": {
-    "board-games-results": "^0.1.6"
+    "board-games-results": "^0.1.8"
   },
   "main": "src/main.ts",
   "engines": {
