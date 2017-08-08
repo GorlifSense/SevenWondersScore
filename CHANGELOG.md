@@ -1,8 +1,13 @@
 # Release notes for Seven Wonders Score
 
+## v0.0.1-alpha.5
+
+* Get /tables from board-games-results@0.1.8
+
 ## v0.0.1-alpha.4
 
-* Connect to board-games-results@0.1.6
+* Table Dashboard
+* Upgrade to Angular `v4.3.0`
 
 ## v0.0.1-alpha.3
 
