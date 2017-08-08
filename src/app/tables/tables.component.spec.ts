@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { TablesComponent } from './tables.component';
 import { TableDetailComponent } from './table-detail/table-detail.component';
 import { TableItemComponent } from './table-item/table-item.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('TablesComponent', () => {
   let component: TablesComponent;
@@ -12,7 +13,7 @@ describe('TablesComponent', () => {
   beforeEach(async(() => {
 
     TestBed.configureTestingModule({
-      imports: [FormsModule],
+      imports: [FormsModule, HttpClientModule],
       declarations: [
         TablesComponent,
         TableDetailComponent,

@@ -2,13 +2,15 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { TablesComponent } from './tables/tables.component';
-import { FormsModule } from '@angular/forms';
 import { TableItemComponent } from './tables/table-item/table-item.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [],
+      imports: [
+        HttpClientModule
+      ],
       declarations: [
         AppComponent,
         NavigationComponent,
