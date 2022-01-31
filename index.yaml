@@ -1,0 +1,151 @@
+openapi: 3.0.1
+info:
+  title: TSP Adapter  
+  description: The TSP generates tokens for payment cards upon requests from the xPay wallets
+  version: 0.4.0
+
+tags:
+  - name: PushProvisioning
+  - name: DeTokenize
+
+paths:
+
+  /v1/payment-instruments/encrypt:
+    post:
+      summary: Create an encrypted payment instrument with the request content as input
+      description: ''
+      operationId: createPaymentInstrument
+      tags:
+        - PushProvisioning
+      requestBody:
+        description: Payment instrument needs to be created as JWE encrypted base64 encoded string
+        required: true
+        content:
+          application/json:
+            schema:
+             $ref: 'definitions.yaml#/CreateEncPaymentInstrRequest'
+            examples:
+              Encrypted:
+                value:
+                  messageId: 'de0815ac-a6a0-11eb-bcbc-0242ac130002'
+                  paymentInstrument: "eyJ...xQ (encrypted base64 string)"
+
+              NonEncrypted:
+                externalValue: 'examples/PushProvisioningUnEncryptedBody.json'
+            
+      responses:
+        '200':
+          description: Encrypted Payment Instrument
+          content:
+            application/json:
+              schema:
+                $ref: 'definitions.yaml#/CreateEncPaymentInstrResponse'
+              example:
+                messageId: 'de0815ac-a6a0-11eb-bcbc-0242ac130002'
+                encPaymentInstrument: 'eyJ...xQ (encrypted base64 string)'
+                statusCode: '0000'
+                statusMessage: 'SUCCESS'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: 'definitions.yaml#/ErrorResponse'
+              examples:
+                NotInRequestorRange:
+                  value:
+                    messageId: 'de0815ac-a6a0-11eb-bcbc-0242ac130002'
+                    statusCode: '1003'
+                    statusMessage: 'PAN_NOT_IN_REQUESTOR_PAN _RANGE'
+                BadRequest:
+                  value:
+                    messageId: 'de0815ac-a6a0-11eb-bcbc-0242ac130002'
+                    statusCode: '1996'
+                    statusMessage: 'BAD_REQUEST'
+
+        # '401':
+        #   description: Unauthorized    
+        #   content:
+        #     application/json:
+        #       schema:
+        #         $ref: 'definitions.yaml#/ErrorResponse'  
+             
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: 'definitions.yaml#/ErrorResponse'             
+              example:
+                messageId: 'de0815ac-a6a0-11eb-bcbc-0242ac130002'
+                statusCode: '1996'
+                statusMessage: 'BAD_REQUEST'
+
+  /v1/detokenize:
+    post:
+      summary: De-tokenize with verification (based on ISO 8583 message type 0100/0110)
+      description: |
+        Supported algorithm for the content encryption is A128CBC-HS256 ("enc" in the JWE header).  
+        {"alg":"RSA-OAEP","enc":"A128CBC-HS256", "kid":"12345/01"}   
+        Kid indicates issuerID '12345' and key index '01'
+      operationId: deTokenizeWithVerification
+      tags:
+        - DeTokenize
+      requestBody:
+        description: ''
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: 'definitions.yaml#/DetokenizeWithVerificationRequest'
+      responses:
+        '200':
+          description: Encrypted Payment Instrument
+          content:
+            application/json:
+              schema:
+                $ref: 'definitions.yaml#/DetokenizeWithVerificationResponse'        
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: 'definitions.yaml#/ErrorResponse'
+        '401':
+          description: Unauthorized 
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: 'definitions.yaml#/ErrorResponse'
+        '503':
+          description: Server not ready
+
+  /v1/card/eligibility:
+    post:
+      summary: Check if card is eligible for tokenization
+      description: Check with the Issuer if the supplied RPAN is eligible for requesting a tokenized card. The Issuer can also provide assets, and terms and conditions to override the default pre-configured values
+      operationId: cardEligibility
+      tags:
+        - CardEligibility
+      requestBody:
+        description: ''
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: 'definitions.yaml#/CheckCardEligibilityRequest'  
+      responses:
+        '200':
+          description: Card is eligible for tokenization
+          content:
+            application/json:
+              schema:
+                $ref: 'definitions.yaml#/CheckCardEligibilityResponse'        
+        '401':
+          description: Unauthorized 
+          content:
+            application/json:
+              schema:
+               $ref: 'definitions.yaml#/ErrorResponse'
